@@ -1,0 +1,298 @@
+[
+    {
+        "value": 0,
+        "color": null,
+        "dozen": null,
+        "column": "0",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 1,
+        "color": "red",
+        "dozen": "first",
+        "column": "1",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 2,
+        "color": "black",
+        "dozen": "first",
+        "column": "2",
+        "isPar": "yes",
+        "range": "low"
+    },
+    {
+        "value": 3,
+        "color": "red",
+        "dozen": "first",
+        "column": "3",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 4,
+        "color": "black",
+        "dozen": "first",
+        "column": "1",
+        "isPar": "yes",
+        "range": "low"
+    },
+    {
+        "value": 5,
+        "color": "red",
+        "dozen": "first",
+        "column": "2",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 6,
+        "color": "black",
+        "dozen": "first",
+        "column": "3",
+        "isPar": "yes",
+        "range": "low"
+    },
+    {
+        "value": 7,
+        "color": "red",
+        "dozen": "first",
+        "column": "1",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 8,
+        "color": "black",
+        "dozen": "first",
+        "column": "2",
+        "isPar": "yes",
+        "range": "low"
+    },
+    {
+        "value": 9,
+        "color": "red",
+        "dozen": "first",
+        "column": "3",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 10,
+        "color": "black",
+        "dozen": "first",
+        "column": "1",
+        "isPar": "yes",
+        "range": "low"
+    },
+    {
+        "value": 11,
+        "color": "black",
+        "dozen": "first",
+        "column": "2",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 12,
+        "color": "red",
+        "dozen": "first",
+        "column": "3",
+        "isPar": "yes",
+        "range": "low"
+    },
+    {
+        "value": 13,
+        "color": "black",
+        "dozen": "second",
+        "column": "1",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 14,
+        "color": "red",
+        "dozen": "second",
+        "column": "2",
+        "isPar": "yes",
+        "range": "low"
+    },
+    {
+        "value": 15,
+        "color": "black",
+        "dozen": "second",
+        "column": "3",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 16,
+        "color": "red",
+        "dozen": "second",
+        "column": "1",
+        "isPar": "yes",
+        "range": "low"
+    },
+    {
+        "value": 17,
+        "color": "black",
+        "dozen": "second",
+        "column": "2",
+        "isPar": "no",
+        "range": "low"
+    },
+    {
+        "value": 18,
+        "color": "red",
+        "dozen": "second",
+        "column": "3",
+        "isPar": "yes",
+        "range": "low"
+    },
+    {
+        "value": 19,
+        "color": "red",
+        "dozen": "second",
+        "column": "1",
+        "isPar": "no",
+        "range": "high"
+    },
+    {
+        "value": 20,
+        "color": "black",
+        "dozen": "second",
+        "column": "2",
+        "isPar": "yes",
+        "range": "high"
+    },
+    {
+        "value": 21,
+        "color": "red",
+        "dozen": "second",
+        "column": "3",
+        "isPar": "no",
+        "range": "high"
+    },
+    {
+        "value": 22,
+        "color": "black",
+        "dozen": "second",
+        "column": "1",
+        "isPar": "yes",
+        "range": "high"
+    },
+    {
+        "value": 23,
+        "color": "red",
+        "dozen": "second",
+        "column": "2",
+        "isPar": "no",
+        "range": "high"
+    },
+    {
+        "value": 24,
+        "color": "black",
+        "dozen": "second",
+        "column": "3",
+        "isPar": "yes",
+        "range": "high"
+    },
+    {
+        "value": 25,
+        "color": "red",
+        "dozen": "third",
+        "column": "1",
+        "isPar": "no",
+        "range": "high"
+    },
+    {
+        "value": 26,
+        "color": "black",
+        "dozen": "third",
+        "column": "2",
+        "isPar": "yes",
+        "range": "high"
+    },
+    {
+        "value": 27,
+        "color": "red",
+        "dozen": "third",
+        "column": "3",
+        "isPar": "no",
+        "range": "high"
+    },
+    {
+        "value": 28,
+        "color": "black",
+        "dozen": "third",
+        "column": "1",
+        "isPar": "yes",
+        "range": "high"
+    },
+    {
+        "value": 29,
+        "color": "black",
+        "dozen": "third",
+        "column": "2",
+        "isPar": "no",
+        "range": "high"
+    },
+    {
+        "value": 30,
+        "color": "red",
+        "dozen": "third",
+        "column": "3",
+        "isPar": "yes",
+        "range": "high"
+    },
+    {
+        "value": 31,
+        "color": "black",
+        "dozen": "third",
+        "column": "1",
+        "isPar": "no",
+        "range": "high"
+    },
+    {
+        "value": 32,
+        "color": "red",
+        "dozen": "third",
+        "column": "2",
+        "isPar": "yes",
+        "range": "high"
+    },
+    {
+        "value": 33,
+        "color": "black",
+        "dozen": "third",
+        "column": "3",
+        "isPar": "no",
+        "range": "high"
+    },
+    {
+        "value": 34,
+        "color": "red",
+        "dozen": "third",
+        "column": "1",
+        "isPar": "yes",
+        "range": "high"
+    },
+    {
+        "value": 35,
+        "color": "black",
+        "dozen": "third",
+        "column": "2",
+        "isPar": "no",
+        "range": "high"
+    },
+    {
+        "value": 36,
+        "color": "red",
+        "dozen": "third",
+        "column": "3",
+        "isPar": "yes",
+        "range": "high"
+    }
+]
