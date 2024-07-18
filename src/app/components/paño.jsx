@@ -14,6 +14,16 @@ export default function Paño() {
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
 
+    const handlePair = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.isPar=="yes") return val.value
+        })
+        setPickedvalue(pickval)
+    }
+    
+    console.log(pickedvalue);
+
     if(winnerNum==pickedvalue) alert("Ganaste")
         return (
             <main className="p-4">
@@ -76,6 +86,9 @@ export default function Paño() {
                         </tr>
                     </tbody>
                 </table>
+                <div>
+                    <button onClick={e=>handlePair(e)}>Par</button>
+                </div>
                 <button onClick={e => { setWinnerNum(getRandomIntInclusive(0, 36)) }} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Jugar</button>
             </main>
         );
