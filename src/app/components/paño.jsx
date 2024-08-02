@@ -21,10 +21,21 @@ export default function Paño() {
         })
         setPickedvalue(pickval)
     }
+
+    const handleImpair = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.isPar=="no") return val.value
+        })
+        setPickedvalue(pickval)
+    }
     
     console.log(pickedvalue);
 
-    if(winnerNum==pickedvalue) alert("Ganaste")
+    pickedvalue.forEach((num)=>{
+        if (num==winnerNum) return alert("Ganaste") 
+    })
+
         return (
             <main className="p-4">
                 <div>
@@ -88,6 +99,10 @@ export default function Paño() {
                 </table>
                 <div>
                     <button onClick={e=>handlePair(e)}>Par</button>
+                    <button onClick={e=>handleImpair(e)}>Impar</button>
+                </div>
+                <div>
+                    <button onClick={e=>handleRed(e)}>Red</button>
                 </div>
                 <button onClick={e => { setWinnerNum(getRandomIntInclusive(0, 36)) }} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Jugar</button>
             </main>
