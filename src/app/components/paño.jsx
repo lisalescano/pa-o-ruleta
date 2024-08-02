@@ -28,7 +28,23 @@ export default function Paño() {
             if(val.isPar=="no") return val.value
         })
         setPickedvalue(pickval)
+    }   
+
+    const handleRed = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.color=="red") return val.value
+        })
+        setPickedvalue(pickval)
     }
+    
+    const handleBlack = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.color=="black") return val.value
+        })
+        setPickedvalue(pickval)
+    }  
     
     console.log(pickedvalue);
 
@@ -103,6 +119,7 @@ export default function Paño() {
                 </div>
                 <div>
                     <button onClick={e=>handleRed(e)}>Red</button>
+                    <button onClick={e=>handleBlack(e)}>Black</button>
                 </div>
                 <button onClick={e => { setWinnerNum(getRandomIntInclusive(0, 36)) }} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Jugar</button>
             </main>
