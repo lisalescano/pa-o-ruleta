@@ -7,7 +7,7 @@ export default function Paño() {
     const values = rouletteValues
     const [pickedvalue, setPickedvalue] = useState([])
     const [winnerNum, setWinnerNum] = useState('Mucha suerte!')
-    const showWinners = []
+    const [showWinners, setShowWinners] = useState([])
 
     function getRandomIntInclusive(min, max) {
         min = Math.ceil(min);
@@ -194,7 +194,10 @@ export default function Paño() {
             </div>
             <button onClick={e => {
                 setWinnerNum(getRandomIntInclusive(0, 36))
-                showWinners.unshift(winnerNum)
+                if (typeof winnerNum == "number")setShowWinners(
+                    [...showWinners,
+                    winnerNum])
+                if (showWinners.length>5) setShowWinners(showWinners.slice())
             }} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Jugar</button>
         </main>
     );
