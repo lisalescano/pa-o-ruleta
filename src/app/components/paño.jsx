@@ -45,6 +45,54 @@ export default function Paño() {
         })
         setPickedvalue(pickval)
     }  
+
+    const handleFirstDozen = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.dozen=="first") return val.value
+        })
+        setPickedvalue(pickval)
+    }  
+
+    const handleSecondDozen = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.dozen=="second") return val.value
+        })
+        setPickedvalue(pickval)
+    } 
+
+    const handleThirdDozen = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.dozen=="third") return val.value
+        })
+        setPickedvalue(pickval)
+    } 
+
+    const handleFirstColumn = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.column=="1") return val.value
+        })
+        setPickedvalue(pickval)
+    }
+    
+    const handleSecondColumn = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.column=="2") return val.value
+        })
+        setPickedvalue(pickval)
+    }
+
+    const handleThirdColumn = (e)=>{
+        e.preventDefault()
+        let pickval = values.map((val)=>{
+            if(val.column=="3") return val.value
+        })
+        setPickedvalue(pickval)
+    }
     
     console.log(pickedvalue);
 
@@ -120,6 +168,16 @@ export default function Paño() {
                 <div>
                     <button onClick={e=>handleRed(e)}>Red</button>
                     <button onClick={e=>handleBlack(e)}>Black</button>
+                </div>
+                <div>
+                    <button onClick={e=>handleFirstDozen(e)}>1-12</button>
+                    <button onClick={e=>handleSecondDozen(e)}>13-24</button>
+                    <button onClick={e=>handleThirdDozen(e)}>25-36</button>
+                </div>
+                <div>
+                    <button onClick={e=>handleFirstColumn(e)}>1st Column</button>
+                    <button onClick={e=>handleSecondColumn(e)}>2nd Column</button>
+                    <button onClick={e=>handleThirdColumn(e)}>3rd Column</button>
                 </div>
                 <button onClick={e => { setWinnerNum(getRandomIntInclusive(0, 36)) }} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Jugar</button>
             </main>
