@@ -112,93 +112,70 @@ export default function Paño() {
     })
 
     return (
-        <main className="p-4">
-            <div>
-                Su número: {pickedvalue}
+        <main className="p-8 bg-gray-800 text-white min-h-screen flex flex-col items-center">
+            <div className="mb-4 text-2xl">
+            Su número: {pickedvalue.filter(val => val !== undefined).join(", ")}
             </div>
-            <button onClick={e => setPickedvalue([])} className="mb-4 px-4 py-2 bg-red-500 text-white rounded">X</button>
-            <br />
-            Número ganador: {winnerNum}
-            <br />
-            Ganadores pasados: {showWinners}
-            <table className="table-auto border-collapse border border-white w-full text-center">
+            <button onClick={e => setPickedvalue([])} className="mb-4 px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded">Borrar selección</button>
+            <div className="text-xl mb-4">
+                Número ganador: {winnerNum}
+            </div>
+            <div className="text-xl mb-4">
+                Ganadores pasados: {showWinners.join(", ")}
+            </div>
+            <table className="table-auto border-collapse border border-gray-700 w-full text-center mb-4">
                 <tbody>
-                    <tr className="border border-white">
-                        <td className="border border-white">
-                            <button value={values[0].value} onClick={e => setPickedvalue(e.currentTarget.value)} >
-                                {values[0].value}
+                    <tr>
+                        <td rowSpan="12" className="border border-gray-700">
+                            <button value="0" onClick={e => {
+                                setWinnerNum('Mucha suerte!');
+                                setPickedvalue([...pickedvalue, e.currentTarget.value]);
+                            }} className="px-4 py-2 m-1 rounded bg-green-500 text-white">
+                                0
                             </button>
                         </td>
                     </tr>
-                    <tr className="border border-white">
-                        {values.map(val => {
-                            if (val.column === "3") return (
-                                <td key={val.value} className="border border-white">
+                    {["1", "2", "3"].map(col => (
+                        <tr key={col} className="border border-gray-700">
+                            {values.filter(val => val.column === col).map(val => (
+                                <td key={val.value} className="border border-gray-700">
                                     <button value={val.value} onClick={e => {
                                         setWinnerNum('Mucha suerte!');
                                         setPickedvalue([...pickedvalue, e.currentTarget.value]);
-                                    }} >
+                                    }} className={`px-4 py-2 m-1 rounded ${val.color === "red" ? "bg-red-500" : "bg-black"} text-white`}>
                                         {val.value}
                                     </button>
                                 </td>
-                            );
-                        })}
-                    </tr>
-                    <tr className="border border-white">
-                        {values.map(val => {
-                            if (val.column === "2") return (
-                                <td key={val.value} className="border border-white">
-                                    <button value={val.value} onClick={e => {
-                                        setWinnerNum('Mucha suerte!');
-                                        setPickedvalue([...pickedvalue, e.currentTarget.value]);
-                                    }} >
-                                        {val.value}
-                                    </button>
-                                </td>
-                            );
-                        })}
-                    </tr>
-                    <tr className="border border-white">
-                        {values.map(val => {
-                            if (val.column === "1") return (
-                                <td key={val.value} className="border border-white">
-                                    <button value={val.value} onClick={e => {
-                                        setWinnerNum('Mucha suerte!');
-                                        setPickedvalue([...pickedvalue, e.currentTarget.value]);
-                                    }} >
-                                        {val.value}
-                                    </button>
-                                </td>
-                            );
-                        })}
-                    </tr>
+                            ))}
+                        </tr>
+                    ))}
                 </tbody>
             </table>
-            <div>
-                <button onClick={e => handlePair(e)}>Par</button>
-                <button onClick={e => handleImpair(e)}>Impar</button>
+            <div className="grid grid-cols-2 gap-4 mb-4">
+                <button onClick={e => handlePair(e)} className="px-4 py-2 bg-green-500 hover:bg-green-700 text-white rounded">Par</button>
+                <button onClick={e => handleImpair(e)} className="px-4 py-2 bg-green-500 hover:bg-green-700 text-white rounded">Impar</button>
             </div>
-            <div>
-                <button onClick={e => handleRed(e)}>Red</button>
-                <button onClick={e => handleBlack(e)}>Black</button>
+            <div className="grid grid-cols-2 gap-4 mb-4">
+                <button onClick={e => handleRed(e)} className="px-4 py-2 bg-red-500 hover:bg-red-700 text-white rounded">Rojo</button>
+                <button onClick={e => handleBlack(e)} className="px-4 py-2 bg-black hover:bg-gray-700 text-white rounded">Negro</button>
             </div>
-            <div>
-                <button onClick={e => handleFirstDozen(e)}>1-12</button>
-                <button onClick={e => handleSecondDozen(e)}>13-24</button>
-                <button onClick={e => handleThirdDozen(e)}>25-36</button>
+            <div className="grid grid-cols-3 gap-4 mb-4">
+                <button onClick={e => handleFirstDozen(e)} className="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded">1-12</button>
+                <button onClick={e => handleSecondDozen(e)} className="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded">13-24</button>
+                <button onClick={e => handleThirdDozen(e)} className="px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded">25-36</button>
             </div>
-            <div>
-                <button onClick={e => handleFirstColumn(e)}>1st Column</button>
-                <button onClick={e => handleSecondColumn(e)}>2nd Column</button>
-                <button onClick={e => handleThirdColumn(e)}>3rd Column</button>
+            <div className="grid grid-cols-3 gap-4 mb-4">
+                <button onClick={e => handleFirstColumn(e)} className="px-4 py-2 bg-purple-500 hover:bg-purple-700 text-white rounded">1ra Columna</button>
+                <button onClick={e => handleSecondColumn(e)} className="px-4 py-2 bg-purple-500 hover:bg-purple-700 text-white rounded">2da Columna</button>
+                <button onClick={e => handleThirdColumn(e)} className="px-4 py-2 bg-purple-500 hover:bg-purple-700 text-white rounded">3ra Columna</button>
             </div>
             <button onClick={e => {
-                setWinnerNum(getRandomIntInclusive(0, 36))
-                if (typeof winnerNum == "number")setShowWinners(
-                    [...showWinners,
-                    winnerNum])
-                if (showWinners.length>5) setShowWinners(showWinners.slice())
-            }} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Jugar</button>
+                const newWinner = getRandomIntInclusive(0, 36);
+                setWinnerNum(newWinner);
+                const newShowWinners = [newWinner, ...showWinners];
+                if (newShowWinners.length > 5) newShowWinners.pop();
+                setShowWinners(newShowWinners);
+            }} className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-700 text-white rounded">Jugar</button>
         </main>
     );
 
